@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParfumSEO</title>
+    <title>Parfum SEO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Arial+Rounded+MT&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,13 +23,169 @@
     </script>
     <!-- End Google Tag Manager -->
 </head>
+
 <body>
-    <h1>Salut</h1>
-    <p> Je me suis un peu perdu</p>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="logo.jpg" style="height: 60px; width: 60px;" alt="logo Parfum SEO"></a>
+            <h1 class="mobile-oonly">VOTRE RÉFÉRENCEMENT DE PARFUM</h1>
+            <h1 class="mobile-disoonly">VOTRE RÉFÉRENCEMENT DE PARFUM</h1>
+            <nav class="navv">
+                <ul class="nav-links">
+                    <li class="mobile-only"><a href="index.html">Accueil</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <nav id="breadcrumb" aria-label="breadcrumb">
+        <ol>
+            <li><a href="index.html">Accueil</a></li>
+        </ol>
+    </nav>
+    <main>
+        <section id="accueil">
+            <div class="container">
+                <div class="align-items-stretch">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="chose">
+                                <div class="card-body">
+                                    <form action="#" method="post">
+                                        <h2 class="title animate__animated animate__fadeIn" data-controller="sentences" data-animation="animate__fadeIn" data-delay="1000">
+                                            Votre référenceur de tous vos parfum préféré
+                                            <br>
+                                            <strong aria-label="de visibilité sur Google ...">
+                                                <span data-sentences-target="sentence" data-color="#ffffff" hidden="">Vous souhaitez rechercher un parfum ? Tester de nouveaux parfum ? Voir la meilleure affaires pour acheter vos parfums ?</span>
+                                                <span id="sentencesBloc" data-sentences-target="sentenceScope"></span>
+                                            </strong>
+                                        </h2>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="formulaire-acceuil">
+                                <div class="card-body">
+                                    <form action="#" method="post">
+                                        <h1>Conception du site en cours</h1>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="choses">
+                                <img class="image" src="trol.gif" style="height: auto; width: 100%; object-fit: cover;" alt="trol">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="accueil">
+            <div class="container">
+                <div class="align-items-stretch">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Recherchez un parfum">
+                                <button id="searchButton" class="btn btn-primary mt-2">Rechercher</button>
+                            </div>
+                        </div>
+                    </div>
+                        <div id="resultContainer" class="row mt-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLN5DHN3"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Parfum SEO. Tous droits réservés.</p>
+            <ul>
+                <li><a href="">Mentions légales</a></li>
+                <li><a href="">Coordonnées – contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="script.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const elemnts = document.querySelectorAll('h2');
+
+        function zoomInElement(element) {
+            element.classList.add('zoom-in');
+            element.classList.remove('zoom-out', 'hidden');
+        }
+
+        function zoomOutElement(element) {
+            element.classList.add('zoom-out');
+            element.classList.remove('zoom-in');
+        }
+
+        const observe = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    zoomInElement(entry.target);
+                } else {
+                    zoomOutElement(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elemnts.forEach(element => {
+            element.classList.add('hidden');
+            observe.observe(element);
+        });
+        const elements = document.querySelectorAll('.formulaire-acceuil, .choses');
+
+        function slideInElement(element) {
+            element.classList.add('slide-in');
+            element.classList.remove('slide-out', 'hidden');
+        }
+
+        function slideOutElement(element) {
+            element.classList.add('slide-out');
+            element.classList.remove('slide-in');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    slideInElement(entry.target);
+                } else {
+                    slideOutElement(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(element => {
+            element.classList.add('hidden');
+            observer.observe(element);
+        });
+    });
+</script>
 </body>
+
 </html>
